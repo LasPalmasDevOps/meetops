@@ -1,24 +1,19 @@
 class Person
 
-   def initialize(name,age)
-      @name = name
-      @age =  age
+   attr_accessor :age, :last_name, :date, :email, :gender, :first_name
+
+   def initialize(first_name,last_name, email, gender, date)
+      @first_name = first_name
+      @last_name = last_name
+      @email = email
+      @date = date
+      @gender = gender
    end
 
-   def name
-     @name
+
+   def to_s
+     @first_name + ' ' + @last_name + ' '  + @email + ' ' + @date + ' ' + @gender
    end
 
-   def name=(name)
-     @name=name
-   end
-
-   def age
-     @age
-   end
-
-   def age=(age)
-     @age=age
-   end
 
 end
